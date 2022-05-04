@@ -1,12 +1,18 @@
+:root {
+    --bg-color: hsl(49 37% 94%);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
 body {
     background-color: #694E4E;
+
 }
 
 nav {
@@ -16,6 +22,8 @@ nav {
     display: flex;
     justify-content: space-around;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 #logo {
@@ -45,7 +53,7 @@ a {
 a:after {
     content: " ";
     position: absolute;
-    background-color: #6C4A4A;
+    background-color: #694E4E;
     height: 3px;
     width: 0;
     left: 0;
@@ -57,7 +65,6 @@ a:hover::after {
     width: 100%;
 
 }
-
 
 #home {
     position: absolute;
@@ -82,4 +89,68 @@ a:hover::after {
 #contact {
     position: absolute;
     left: 86rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    color: #F3C5C5;
+    position: relative;
+    top: 10rem;
+
+}
+
+h1 {
+    position: relative;
+
+}
+
+h1::before,
+h1::after {
+    content: ' ';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+h1::before {
+    background: #694E4E;
+    animation: typewriter 6s steps(26) 1s forwards;
+}
+
+h1::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter 6s steps(26) 1s forwards, blink 500ms steps(26) infinite;
+
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h3 {
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 8s forwards;
 }

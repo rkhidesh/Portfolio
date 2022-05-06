@@ -13,38 +13,88 @@
 </head>
 
 <body>
-
-    <nav>
-        <img src="images/logo.png" id="logo">
-        <a id="home" href="">Home</a>
-        <a id="about" href="about.html" target="new">About</a>
-        <a id="skills" href="">Skills</a>
-        <a id="projects" href="">Projects</a>
-        <a id="contact" href="">Contact</a>
-
-    </nav>
-
     <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" style="position: absolute; left: 8rem;">Home</a></li>
+                <li><a href="#about" style="position: absolute; left: 22rem;">About</a></li>
+                <li><a href="#skills" style="position: absolute; left: 36rem;">Skills</a></li>
+                <img id="logo" src="images/logo.png">
+                <li><a href="#projects" style="position: absolute; left: 66rem;">Projects</a></li>
+                <li><a href="#contact" style="position: absolute; left: 86rem;">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <h1 id="title" style="font-size: 2.5rem;">Hello, my name is Rebecca.</h1>
+            <h3 id="sec1_description" style="padding-top: 3rem;">Thank you for stopping by and feel free to look around.
+            </h3>
+        </section>
+        <section id="about">
+            <h1>About</h1>
+            <br>
+            <h3>I'm a student and I'm currently studying Software Engineering.</h3>
+            <br>
+            <h3>It's been a year and a half since I started my programming journey</h3>
+            <br>
+            <h3>and so far it has been challenging but rewarding.</h3>
+            <br>
+            <h3>This is just the first of many projects I plant to make in the future.</h3>
+            <br>
+            <br>
+        </section>
+        <section id="skills">
+            <h1>Skills</h1>
+            <div class="skill-bars">
+                <div class="bar">
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line python">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>C#</span>
+                    </div>
+                    <div class="progress-line c-sharp">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line javaScript">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
 
-        <h1>Hello, my name is Rebecca.</h1>
-        <br> <br>
-        <br>
-        <h3>Welcome to my website!</h3>
-        <br>
-        <h3>Thank you for stopping by and feel free to look around.</h3>
-
-        <!--
-        <h3>I'm a student and I'm currently studying Software Engineering.</h3>
-        <br>
-        <h3>It's been a year and a half since I started my programming journey</h3>
-        <br>
-        <h3>and so far it has been challenging but rewarding.</h3>
-        <br>
-        <h3>This is just the first of many projects I plant to make in the future.</h3>
-        <br>
-        <br>
-         -->
-
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+        </section>
+    </div>
     </div>
 
 

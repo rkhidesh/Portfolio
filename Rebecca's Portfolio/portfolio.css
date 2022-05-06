@@ -1,56 +1,62 @@
-:root {
-    --bg-color: hsl(49 37% 94%);
-    --typewriterSpeed: 6s;
-    --typewriterCharacters: 24;
-}
-
 * {
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
 }
 
 body {
-    background-color: #694E4E;
-
+    height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
 }
 
-nav {
+.container {
     width: 100%;
-    height: 64px;
-    background-color: #F3C5C5;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     display: flex;
-    justify-content: space-around;
-    margin: auto;
+    width: 100%;
+    height: 60px;
+    background: #F3C5C5;
     font-family: 'Open Sans', sans-serif;
-
 }
 
-#logo {
-    height: 120px;
-    width: 150px;
-    padding-top: .4rem;
-    padding-left: 2rem;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
 }
 
-a {
-    position: relative;
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
     color: black;
+    position: relative;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    top: 1rem;
     padding: 0 10px;
 }
 
-a:after {
+.navbar ul li a:after {
     content: " ";
     position: absolute;
     background-color: #694E4E;
@@ -61,55 +67,71 @@ a:after {
     transition: .4s;
 }
 
-a:hover::after {
+.navbar ul li a:hover::after {
     width: 100%;
+}
+
+#logo {
+    height: 120px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    /* Scroll Snap */
+    scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 3.5rem;
+}
+
+/* Section Images */
+section#home {
+    background: #694E4E no-repeat center center/cover;
+    color: #fadede;
+}
+
+section#about {
+    background: #886F6F no-repeat center center/cover;
+    color: #F7DAD9;
 
 }
 
-#home {
-    position: absolute;
-    left: 8rem;
+section#skills {
+    background: #C1A3A3 no-repeat center center/cover;
+    color: #694E4E;
 }
 
-#about {
-    position: absolute;
-    left: 22rem;
+section#projects {
+    background: #F3C5C5 no-repeat center center/cover;
+    color: #694E4E;
+
 }
 
-#skills {
-    position: absolute;
-    left: 36rem;
-}
-
-#projects {
-    position: absolute;
-    left: 66rem;
-}
-
-#contact {
-    position: absolute;
-    left: 86rem;
+section#contact {
+    background: #fadede no-repeat center center/cover;
+    color: #886F6F;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: 'Source Code Pro', monospace;
-    color: #F3C5C5;
-    position: relative;
+
     top: 10rem;
 
 }
 
 h1 {
     position: relative;
-
 }
 
-h1::before,
-h1::after {
+#title::before,
+#title::after {
     content: ' ';
     top: 0;
     bottom: 0;
@@ -118,12 +140,12 @@ h1::after {
     position: absolute;
 }
 
-h1::before {
+#title::before {
     background: #694E4E;
     animation: typewriter 6s steps(26) 1s forwards;
 }
 
-h1::after {
+#title::after {
     width: 0.125em;
     background: black;
     animation: typewriter 6s steps(26) 1s forwards, blink 500ms steps(26) infinite;
@@ -149,8 +171,200 @@ h1::after {
     }
 }
 
-h3 {
+#sec1_description {
     opacity: 0;
     transform: translateY(3rem);
     animation: fadeInUp 2s ease 8s forwards;
+}
+
+.skill-bars {
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.skill-bars {
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    top: 3.5rem;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #694E4E;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+    width: 80%;
+}
+
+.bar .progress-line.css span {
+    width: 60%;
+}
+
+.bar .progress-line.python span {
+    width: 30%;
+}
+
+.bar .progress-line.c-sharp span {
+    width: 52%;
+}
+
+.bar .progress-line.javaScript span {
+    width: 40%;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.html span::after {
+    content: "80%";
+}
+
+.progress-line.css span::after {
+    content: "60%";
+}
+
+.progress-line.python span::after {
+    content: "30%";
+}
+
+.progress-line.c-sharp span::after {
+    content: "52%";
+}
+
+.progress-line.javaScript span::after {
+    content: "40%";
 }

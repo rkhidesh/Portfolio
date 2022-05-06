@@ -26,7 +26,8 @@
         </nav>
         <section id="home">
             <h1 id="title" style="font-size: 2.5rem;">Hello, my name is Rebecca.</h1>
-            <h3 id="sec1_description" style="padding-top: 3rem;">Thank you for stopping by and feel free to look around.
+            <h3 id="sec1_description" style="padding-top: 3rem;">Welcome to my website.</h3>
+            <h3 id="sec1_description" style="padding-top: 1rem;">Thank you for stopping by and feel free to look around.
             </h3>
         </section>
         <section id="about">
@@ -92,10 +93,33 @@
 
         </section>
         <section id="contact">
-            <h1>Contact</h1>
+            <h1 style="position: relative; top:14rem">Contact</h1>
+
+            <div class="contact_form">
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small class="error"></small>
+
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" placeholder="Your E-mail">
+                    <small class="error"></small>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Your Message" rows="6"></textarea>
+                    <small class="error"></small>
+
+                    <div class="center">
+                        <input type="submit" value="Send Message">
+                    </div>
+                </form>
+            </div>
+
         </section>
     </div>
-    </div>
+
+
+
 
 
     <script src="portfolio.js"></script>

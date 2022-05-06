@@ -115,7 +115,7 @@ section#projects {
 }
 
 section#contact {
-    background: #fadede no-repeat center center/cover;
+    background: #fadede;
     color: #886F6F;
 }
 
@@ -367,4 +367,60 @@ h1 {
 
 .progress-line.javaScript span::after {
     content: "40%";
+}
+
+.contact_form {
+    position: relative;
+    width: 40%;
+    top: 8rem;
+    padding-bottom: 5rem;
+
+}
+
+form {
+    width: 90%;
+    background: white;
+    margin: 17vh auto 0 auto;
+    padding: 40px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #D3D3D3;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-bottom: 1px solid #886F6F;
+}
+
+.center {
+
+    text-align: center;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 200px;
+    cursor: pointer;
+    background: linear-gradient(to right, #F3C5C5, #C1A3A3);
 }

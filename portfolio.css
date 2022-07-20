@@ -122,7 +122,6 @@ section#contact {
 
 .container {
     font-family: 'Source Code Pro', monospace;
-
     top: 10rem;
 
 }
@@ -450,4 +449,11 @@ input[type="submit"] {
 
 #projects a:hover::after {
     width: 100%;
+}
+
+#gif {
+    width: 225px;
+    height: 223px;
+    position: absolute;
+    top: 30rem;
 }

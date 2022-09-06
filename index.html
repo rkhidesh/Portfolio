@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Rebecca Khidesheli</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+<body>
+ <div class="box">
+  
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg py-0">
+      <div class="container-fluid">
+
+        <!--leftside-->
+        <div class="collapse navbar-collapse order-lg-1 order-3 navigation-menu" id="navbarSupportedContent1">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="title1" class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about" style="margin-right: 7rem;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills" style="margin-right: 4rem;">Skills</a>
+          </li>
+        </ul>
+        </div>
+        <!--left side-->
+
+        <a class="navbar-brand order-1 mr-lg-0" href="#">
+            <img src="images/logo.png" id="logo">
+        </a>
+        <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target=".navigation-menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--right side-->
+               <div class="collapse navbar-collapse order-lg-3 order-4 navigation-menu" id="navbarSupportedContent2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="projects" aria-current="page" href="#project">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact" style="margin-right: 11rem;">Contact</a>
+                    </li>
+                  </ul>
+              </div> 
+        <!--right side-->
+      </div>
+    </nav>
+  <!--navbar-->
+
+ <!--Section 1 Start-->
+ <section id="home">
+  <h1 id="title">Hello, my name is Rebecca.</h1>
+  <h3 class="sec1_description">Welcome to my website.</h3>
+  <h3 class="sec1_description" id="sec1_description2">Thank you for stopping by and feel free to look
+    around.
+  </h3>
+ <img src="images/g.gif" id="gif">
+</section>
+ <!--Section 1 End-->
+
+ <!--Section 2 Start-->
+ <section id="about">
+  <h1 id="title2">About</h1>
+
+  <h3 id="sec2_description">I'm a student and I'm currently studying Software Engineering.
+  It's been a year and a half since I started my programming journey
+  and so far it has been challenging but rewarding.
+  This is just the first of many projects I plan to make in the future.</h3>
+
+  <div class="socials">
+      <a href="https://www.instagram.com/rkhidesh/" target="_blank"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+      <a href="https://ca.linkedin.com/in/rebecca-khidesheli-189a0b1a0?trk=people-guest_people_search-card" target="_blank"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+  </div>
+  </section>
+ <!--Section 2 End-->
+
+  <!--Section 3 Start-->           
+ <section id="skills" >
+  <h1 id="title3">Skills</h1>
+  <div class="skill-bars">
+      <div class="bar">
+          <div class="info">
+              <span>HTML</span>
+          </div>
+          <div class="progress-line html">
+              <span></span>
+          </div>
+      </div>
+      <div class="bar">
+          <div class="info">
+              <span>CSS</span>
+          </div>
+          <div class="progress-line css">
+              <span></span>
+          </div>
+      </div>
+      <div class="bar">
+          <div class="info">
+              <span>Python</span>
+          </div>
+          <div class="progress-line python">
+              <span></span>
+          </div>
+      </div>
+      <div class="bar">
+          <div class="info">
+              <span>C#</span>
+          </div>
+          <div class="progress-line c-sharp">
+              <span></span>
+          </div>
+      </div>
+      <div class="bar">
+          <div class="info">
+              <span>JavaScript</span>
+          </div>
+          <div class="progress-line javaScript">
+              <span></span>
+          </div>
+      </div>
+  </div>
+  </section>
+  <!--Section 3 End-->           
+
+
+  <!--Section 4 Start-->           
+   <section id="project">
+    <h1 id="title4">Projects</h1>
+    <a href="https://rkhidesh.github.io/Calculator/" target="_blank">Calculator</a>
+    <a href="https://rkhidesh.github.io/Pomodoro-Timer/" target="_blank">Pomodoro Timer</a>
+    <a href="https://rkhidesh.github.io/Trivia-Game/" target="_blank">Trivia Game</a>
+  </section>
+  <!--Section 4 End-->           
+
+  <!--Section 5 Start-->   
+  <section id="contact">
+    <h1 id="title5">Contact</h1>
+
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Name:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your E-mail">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Your Message"></textarea>
+      </div>
+      <div class="center">
+        <button id="submit" onclick="sendMail(); return false">Send Message</button>
+    </div>
+    <div class="text-center">
+       ©<span id="year"></span> Copyright:
+      <a>REBECCA KHIDESHELI</a>
+    </div>
+</section>        
+  <!--Section 5 End-->           
+
+ </div>
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <script src="script.js"></script>
+  </body>
+</html>

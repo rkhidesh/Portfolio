@@ -1,0 +1,626 @@
+@media only screen and (max-width: 600px) {
+    .navbar-expand-lg .navbar-collapse {
+        width: 100%;
+    }
+
+}
+
+.box {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#logo {
+    height: 110px;
+    padding-left: 3rem;
+}
+
+.lead {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    background: #F3C5C5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+}
+
+
+.navbar ul li a {
+    color: black;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+}
+
+.navbar ul li a:after {
+    content: " ";
+    position: absolute;
+    background-color: #694E4E;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .4s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+#projects {
+    margin-right: 5rem;
+    margin-left: 10rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    /* Scroll Snap */
+    scroll-snap-align: center;
+}
+
+section h1 {
+    font-size: 3.5rem;
+}
+
+#title {
+    position: relative;
+    top: -5rem;
+    font-size: 2.5rem;
+}
+
+#title::before,
+#title::after {
+    content: ' ';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+#title::before {
+    background: #694E4E;
+    animation: typewriter 6s steps(26) 1s forwards;
+}
+
+#title::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter 6s steps(26) 1s forwards, blink 500ms steps(26) infinite;
+
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#title1 {
+    margin-right: 6rem;
+    margin-left: 3rem;
+}
+
+.sec1_description {
+    padding-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 8s forwards;
+    position: relative;
+    font-size: 1.17em;
+    top: -1rem;
+}
+
+/* Section Images */
+section#home {
+    background: #694E4E no-repeat center center/cover;
+    color: #fadede;
+    position: relative;
+}
+
+section#about {
+    background: #886F6F no-repeat center center/cover;
+    color: #F7DAD9;
+
+}
+
+
+section#skills {
+    background: #C1A3A3 no-repeat center center/cover;
+    color: #694E4E;
+}
+
+section#project {
+    background: #F3C5C5 no-repeat center center/cover;
+    color: #694E4E;
+
+}
+
+section#contact {
+    background: #fadede;
+    color: #886F6F;
+    height: 100vh;
+}
+
+#gif {
+    width: 225px;
+    height: 223px;
+    position: absolute;
+    top: 30rem;
+}
+
+#sec2_description {
+    width: 700px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 250%;
+}
+
+#title2 {
+    padding-bottom: 4rem;
+    position: relative;
+    top: 2rem;
+}
+
+ion-icon {
+    color: white;
+}
+
+.socials {
+    display: inline-block;
+    padding-top: 2rem;
+}
+
+
+.skill-bars {
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.skill-bars {
+    padding: 25px 30px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    top: 3.5rem;
+}
+
+.skill-bars .bar {
+    margin: 20px 0;
+
+}
+
+.skill-bars .bar:first-child {
+    margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+    font-weight: 500;
+    font-size: 17px;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.skill-bars .bar .progress-line {
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+        0 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.bar .progress-line span {
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #694E4E;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+    width: 80%;
+}
+
+.bar .progress-line.css span {
+    width: 60%;
+}
+
+.bar .progress-line.python span {
+    width: 45%;
+}
+
+.bar .progress-line.c-sharp span {
+    width: 40%;
+}
+
+.bar .progress-line.javaScript span {
+    width: 60%;
+}
+
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    top: -10px;
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 1px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.html span::after {
+    content: "80%";
+}
+
+.progress-line.css span::after {
+    content: "60%";
+}
+
+.progress-line.python span::after {
+    content: "45%";
+}
+
+.progress-line.c-sharp span::after {
+    content: "40%";
+}
+
+.progress-line.javaScript span::after {
+    content: "50%";
+}
+
+
+#project a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    padding-top: 1rem;
+
+}
+
+#project a:after {
+    content: " ";
+    position: absolute;
+    background-color: #694E4E;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: .4s;
+}
+
+#project a:hover::after {
+    width: 100%;
+}
+
+#title4 {
+    position: relative;
+    top: -3rem
+}
+
+#title5 {
+    position: relative;
+    font-size: 3rem;
+    top: 4rem;
+}
+
+.form-group {
+    position: relative;
+    width: 400px;
+    padding-bottom: 2rem;
+    top: 5rem;
+}
+
+label {
+    margin: 10px 0;
+
+}
+
+.center {
+    position: relative;
+    top: 3rem;
+
+}
+
+#submit {
+    margin-top: 30px;
+    max-width: 200px;
+    cursor: pointer;
+    background: linear-gradient(to right, #F3C5C5, #C1A3A3);
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid #D3D3D3;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#submit:active {
+    transform: translateY(4px);
+}
+
+input[type="text"]:focus,
+#submit:focus,
+textarea:focus {
+    border-bottom: 1px solid #886F6F;
+}
+
+.text-center {
+    text-decoration: none;
+    color: #886F6F;
+    position: relative;
+    font-size: .8rem;
+    left: 40rem;
+    top: 4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #logo {
+        padding-left: 0;
+    }
+
+    #projects {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .navbar ul li a:hover::after {
+        width: 0%;
+    }
+
+    .navbar ul li a {
+        font-size: 1rem;
+    }
+
+    #title {
+        font-size: 1.1rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .sec1_description {
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    #sec1_description2 {
+        width: 300px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    #gif {
+        top: 35rem;
+        width: 168.75px;
+        height: 167.25px;
+    }
+
+    #sec2_description {
+        width: 300px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        font-size: .9rem;
+        text-align: center;
+        line-height: 250%;
+    }
+
+    #title1 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #title2 {
+        top: 4rem;
+        font-size: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .skill-bars {
+        width: 300px;
+    }
+
+    #title3 {
+        font-size: 2rem;
+        top: 2rem;
+        position: relative;
+    }
+
+
+    #title4 {
+        font-size: 2rem;
+    }
+
+    #project a:hover::after {
+        width: 0%;
+    }
+
+    #project a {
+        font-size: 1rem;
+    }
+
+    #title5 {
+        font-size: 2rem;
+    }
+
+
+    .form-group {
+        position: relative;
+        width: 200px;
+        padding-bottom: 2rem;
+        top: 5rem;
+    }
+
+    label {
+        margin: 5px 0;
+
+    }
+
+    .form-group input::placeholder,
+    textarea::placeholder {
+        font-size: .7rem;
+    }
+
+    #submit {
+        max-width: 200px;
+        font-size: .8rem;
+    }
+
+    .text-center {
+        text-decoration: none;
+        color: #886F6F;
+        left: 0rem;
+        font-size: .6rem;
+        bottom: -168.5rem;
+        padding-bottom: .5rem;
+    }
+
+}
